@@ -1,0 +1,241 @@
+.main-conteiner {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.header-main {
+  display: flex;
+  margin: 50px 900px;
+}
+
+@media screen and (max-width: 767px) {
+  .header-main {
+    display: none;
+    position: fixed;
+    top: 85px;
+    right: -200px;
+    color: white;
+    transition-duration: 3s;
+  }
+}
+
+.header-box {
+  margin: 45px 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .bun {
+    width: 40px;
+    height: 40px;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 19%;
+    top: 13%;
+    /* background-color: aqua; */
+  }
+  .bun .pate,
+  .bun .pate::before,
+  .bun .pate::after {
+    width: 100%;
+    height: 5px;
+    display: block;
+    background-color: grey;
+    border-radius: 2px;
+    transition: all 1s ease;
+  }
+  .bun .pate {
+    position: relative;
+    top: calc(50% - 2px);
+  }
+  .bun .pate::before,
+  .bun .pate::after {
+    position: absolute;
+    content: '';
+  }
+  .bun .pate::before {
+    top: -9px;
+  }
+  .bun .pate::after {
+    top: 9px;
+  }
+  #hamburger:checked + .bun .pate {
+    background-color: transparent;
+  }
+  #hamburger:checked + .bun .pate::before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #hamburger:checked + .bun .pate::after {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+  #hamburger:checked ~ .header-right {
+    right: 0;
+  }
+}
+
+.main-conteiner {
+  position: relative;
+  left: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .main-conteiner {
+    position: static;
+  }
+}
+
+.main-box1 {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .main-box1 {
+    position: relative;
+  }
+}
+
+.main-box2 {
+  position: absolute;
+  top: -120px;
+  left: -60px;
+}
+
+@media screen and (max-width: 767px) {
+  .main-box2 {
+    position: static;
+    display: flex;
+    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.main-box3 {
+  position: absolute;
+  left: 590px;
+  top: 240px;
+}
+
+@media screen and (max-width: 767px) {
+  .main-box3 {
+    left: 4%;
+    top: 29%;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-font {
+    text-align: center;
+    font-size: 15px;
+  }
+}
+
+.sp-br {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .sp-br {
+    display: block;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.visual-pc {
+  animation-name: fadeIn;
+  animation-duration: 10s;
+}
+
+h1 {
+  text-align: center;
+  padding: 50px;
+  font-size: 30px;
+}
+
+.contents {
+  background-color: aqua;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 100px;
+}
+
+.contents a {
+  right: 0px;
+  bottom: 20px;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  min-height: 100px;
+}
+
+.contents a::after {
+  position: absolute;
+  transition: 0.5s;
+  right: 0;
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: #000000;
+}
+
+.contents a:hover::after {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .contents .blog {
+    left: 0px;
+    position: absolute;
+    align-items: flex-end;
+    min-height: 100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contents {
+    display: block;
+    position: static;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.contents-bx1 {
+  position: relative;
+  width: 317px;
+  margin: 5px;
+  height: 400px;
+  display: inline-block;
+  transition: all .4s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  .contents-bx1 {
+    margin: 0 auto;
+  }
+}
+
+.contents-bx1:hover {
+  box-shadow: 1px 1px 12px black;
+}
+
+.ft {
+  background-color: black;
+  height: 50px;
+  color: white;
+  text-align: center;
+  font-size: 7px;
+  margin: 0 auto;
+  padding: 55px 0;
+}
+/*# sourceMappingURL=style.css.map */
